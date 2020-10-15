@@ -41,6 +41,7 @@ io.on("connection", (socket) => {
   socket.on("disconnect", () => {
     clients--
     console.log("client disconnected.." + clients + "clients remainining");
+    socket.broadcast.emit('newclientconnect', {description: "someone has disconnected!"})
   });
 
 });

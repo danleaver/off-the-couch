@@ -10,6 +10,11 @@ const Watch = () => {
     socket.on("stream", imagestream => {
       setImage(imagestream);
     });
+    socket.send("Watching")
+
+    return () => {
+      socket.send("Not Watching")
+      socket.disconnect();}
   }, [])
 
   return (
