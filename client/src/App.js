@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, Switch, Route } from "react-router-dom";
-import CouchWatch from "./components/CouchWatch";
+import CouchWatch from "./components/Watch";
 import Home from './components/Home';
 
 const App = () => (
